@@ -17,8 +17,7 @@ import java.util.Properties;
 public class FachadaBD {
 
     private java.sql.Connection conexion;
-    private DAOUsuarios daoUsuarios;
-    private DAOAdministracion daoAdministracion;
+    //private DAOLibros daoLibros;
 
     public FachadaBD() {
         Properties configuracion = new Properties();
@@ -42,8 +41,7 @@ public class FachadaBD {
                     configuracion.getProperty("baseDatos"),
                     usuario);
 
-            daoUsuarios = new DAOUsuarios(conexion);
-            daoAdministracion = new DAOAdministracion(conexion);
+            //daoLibros = new DAOLibros(conexion, fa);
           
         } catch (FileNotFoundException f){
             System.out.println(f.getMessage());

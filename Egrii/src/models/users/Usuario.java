@@ -26,6 +26,8 @@ abstract class Usuario {
         this.password = password;
         this.direccion = direccion;
     }
+    
+    
 
     @Override
     public boolean equals(Object obj) {

@@ -13,15 +13,12 @@ import models.Controlador;
  */
 public class FachadaGUI {
     
-    private final Controlador controlador;
+    public final Controlador controlador;
     private Frame vPrincipal;
-
-    public FachadaGUI(Controlador controlador) {
+    
+    public FachadaGUI(Controlador controlador){
         this.controlador = controlador;
         vPrincipal = new Login(controlador);
-        
+        vPrincipal.setVisible(true);
     }
-    
-    
-
 }
