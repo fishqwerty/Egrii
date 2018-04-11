@@ -3,18 +3,34 @@
  */
 package models;
 
+import dataBase.FachadaBD;
+import gui.FachadaGUI;
+
 /**
  *
  * @author test
  */
-public class Egrii {
+public class Egrii implements Controlador {
+    
+    private FachadaBD baseDatos;
+    private FachadaGUI gui;
+
+    public Egrii() {
+        
+       baseDatos = new FachadaBD();
+       gui = new FachadaGUI(this);
+    }
+    
+    
+    
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hola mundo");
+        new Egrii();
+        
     }
     
 }

@@ -5,15 +5,21 @@
  */
 package dataBase;
 
+import java.sql.Connection;
+
 /**
  *
  * @author test
  */
 abstract class AbstractBD {
     
-    //private aplicacion.FachadaAplicacion fa;
     private java.sql.Connection conexion;
 
+    public AbstractBD(Connection conexion) {
+        this.conexion = conexion;
+    }
+
+    
    
     protected java.sql.Connection getConexion(){
         return this.conexion;
@@ -22,12 +28,4 @@ abstract class AbstractBD {
     protected void setConexion(java.sql.Connection conexion){
         this.conexion=conexion;
     }
- /*  
-   protected void setFachadaAplicacion(aplicacion.FachadaAplicacion fa){
-       this.fa=fa;
-   }
-   
-   protected aplicacion.FachadaAplicacion getFachadaAplicacion(){
-       return fa;
-   }*/
 }
