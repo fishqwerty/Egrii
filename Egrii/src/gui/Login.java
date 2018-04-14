@@ -5,6 +5,7 @@
  */
 package gui;
 
+import java.awt.Color;
 import models.Controlador;
 import models.users.Usuario;
 
@@ -90,6 +91,12 @@ public class Login extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 entrarLbMouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                entrarLbMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                entrarLbMouseEntered(evt);
+            }
         });
 
         registroLb.setBackground(new java.awt.Color(51, 122, 183));
@@ -101,6 +108,12 @@ public class Login extends javax.swing.JFrame {
         registroLb.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 registroLbMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                registroLbMouseExited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                registroLbMouseEntered(evt);
             }
         });
 
@@ -188,6 +201,22 @@ public class Login extends javax.swing.JFrame {
     private void registroLbMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registroLbMouseClicked
        controller.nuevoRegistro();
     }//GEN-LAST:event_registroLbMouseClicked
+
+    private void entrarLbMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarLbMouseEntered
+        entrarLb.setBackground(new java.awt.Color(59, 200, 124));
+    }//GEN-LAST:event_entrarLbMouseEntered
+
+    private void entrarLbMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarLbMouseExited
+        entrarLb.setBackground(new java.awt.Color(51, 183, 112));
+    }//GEN-LAST:event_entrarLbMouseExited
+
+    private void registroLbMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registroLbMouseEntered
+        registroLb.setBackground(new java.awt.Color(59,135,200));
+    }//GEN-LAST:event_registroLbMouseEntered
+
+    private void registroLbMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registroLbMouseExited
+        registroLb.setBackground(new java.awt.Color(51, 122, 183));
+    }//GEN-LAST:event_registroLbMouseExited
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel callToActionLb;
