@@ -21,4 +21,5 @@ public interface Controlador {
     public void loggeado(String email);
     public Usuario obtenerUsuario(String email);
     public boolean existeUsuario(String email);
+    public void funcionManuel();
 }
