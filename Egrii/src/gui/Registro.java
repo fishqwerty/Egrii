@@ -5,23 +5,28 @@
  */
 package gui;
 
+import models.Controlador;
+import models.users.Cliente;
+
 /**
  *
  * @author sabela
  */
 public class Registro extends javax.swing.JDialog {
+    
+    private Controlador controller;
 
     /**
      * Creates new form Registro
      */
-    public Registro(java.awt.Frame parent, boolean modal) {
+    public Registro(java.awt.Frame parent, boolean modal, Controlador controller) {
         super(parent, modal);
-        
+        this.controller=controller;
         faltanCamposCliente.setVisible(false);
         faltanCamposEmpresa.setVisible(false);
         falloEmpresaRegistrada.setVisible(false);
         falloEmailRegistrado.setVisible(false);
-        
+
         initComponents();
     }
 
@@ -418,15 +423,18 @@ public class Registro extends javax.swing.JDialog {
         // TODO add your handling code here:
         falloEmailRegistrado.setVisible(false);
         faltanCamposCliente.setVisible(false);
-        if(textoNombreCliente.getText().isEmpty() || textoIbanCliente.getText().isEmpty() || textoTlfCliente textoEmailCliente.getText().isEmpty() || textoPasswordCliente.getText().isEmpty() || textoDirCliente.getText().isEmpty()){
+        Cliente user = new Cliente(textoTlfCliente.getText(), textoIbanCliente.getText(), null, 
+                textoNombreCliente.getText(), textoEmailCliente.getText(), textoPasswordCliente.getText(), 
+                textoDirCliente.getText()); 
+        
+        if (textoNombreCliente.getText().isEmpty() || textoIbanCliente.getText().isEmpty() || textoTlfCliente.getText().isEmpty()
+                || textoEmailCliente.getText().isEmpty() || textoPasswordCliente.getText().isEmpty() || textoDirCliente.getText().isEmpty()) {
             faltanCamposCliente.setVisible(true);
-        }
-        else if(controller.existeUsuario(textoEmailCliente.getText())){
+        } else if (controller.existeUsuario(user)) {
             falloEmailRegistrado.setVisible(true);
-        }
-        else{
-            controller.registrarUsuario(textoNombreCliente.getText, textoPasswordCliente.getText(), textoEmailCliente.getText(), textoTlfCliente.getText(), textoIbanCliente.getText(), textoDirCliente.getText());
-            
+        } else {
+            controller.registrarUsuario(user);
+
         }
     }//GEN-LAST:event_aceptarBtnClienteActionPerformed
 
@@ -458,47 +466,6 @@ public class Registro extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_textoDirEmpresaActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                Registro dialog = new Registro(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aceptarBtnCliente;

@@ -6,6 +6,7 @@
 package models;
 
 import models.users.Cliente;
+import models.users.Usuario;
 
 
 /**
@@ -17,8 +18,9 @@ public interface Controlador {
     
     
     public void nuevoRegistro();
-    public boolean comprobarAutentificacion(String email, String password);
-    public void loggeado(String email);
+    public boolean comprobarAutentificacion(Usuario user);
+    public boolean loggeado(Usuario user);
     public Usuario obtenerUsuario(String email);
-    public boolean existeUsuario(String email);
+    public boolean existeUsuario(Usuario user);
+    public void registrarUsuario(Cliente user);
 }

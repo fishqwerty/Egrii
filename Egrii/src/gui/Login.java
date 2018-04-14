@@ -6,7 +6,7 @@
 package gui;
 
 import models.Controlador;
-import models.users.Cliente;
+import models.users.Usuario;
 
 /**
  *
@@ -154,8 +154,9 @@ public class Login extends javax.swing.JFrame {
     private void iniciarSesionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSesionBtnActionPerformed
         // TODO add your handling code here:
         falloInicioSesion.setVisible(false);
-        if(controller.comprobarAutentificacion(textoEmail.getText(),textoPassword.getText())){
-            Usuario user = controller.obtenerUsuario(textoEmail.getText());
+        Usuario user = new Usuario(null, null, textoEmail.getText(), textoPassword.getText(), null);
+        if(controller.comprobarAutentificacion(user)){
+            user = controller.obtenerUsuario(textoEmail.getText());
             
             controller.loggeado(user);
             this.dispose();
@@ -165,50 +166,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_iniciarSesionBtnActionPerformed
 
     private void registrarseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarseBtnActionPerformed
-        // TODO add your handling code here:
-        /**/
-        
         controller.nuevoRegistro();
     }//GEN-LAST:event_registrarseBtnActionPerformed
 
     private void textoEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textoEmailActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel falloInicioSesion;

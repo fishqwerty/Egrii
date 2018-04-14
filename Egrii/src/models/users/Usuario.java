@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author test
  */
-abstract class Usuario {
+public class Usuario {
     
     private String codigo; //Equivale al nif en Empresa
     private String nombre;

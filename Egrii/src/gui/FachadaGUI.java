@@ -18,7 +18,13 @@ public class FachadaGUI {
     
     public FachadaGUI(Controlador controlador){
         this.controlador = controlador;
-        vPrincipal = new Login(controlador);
-        vPrincipal.setVisible(true);
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                vPrincipal = new Login(controlador);
+                vPrincipal.setVisible(true);
+            }
+        });
     }
 }

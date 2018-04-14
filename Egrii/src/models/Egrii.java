@@ -5,6 +5,7 @@ package models;
 
 import gui.FachadaGUI;
 import models.users.Cliente;
+import models.users.Usuario;
 
 /**
  *
@@ -32,23 +33,30 @@ public class Egrii implements Controlador{
     }
 
     @Override
-    public boolean comprobarAutentificacion(String email, String password) {
+    public boolean comprobarAutentificacion(Usuario user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void loggeado(String email) {
+    public boolean loggeado(Usuario user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Cliente obtenerUsuario(String email) {
+    public Usuario obtenerUsuario(String email) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean existeUsuario(String email) {
+    public boolean existeUsuario(Usuario user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void registrarUsuario(Cliente user) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
     
 }

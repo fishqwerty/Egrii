@@ -9,7 +9,7 @@ package models.users;
  *
  * @author test
  */
-abstract class Administrador extends Usuario{
+public abstract class Administrador extends Usuario{
 
     public Administrador(String codigo, String nombre, String email, String password, String direccion) {
         super(codigo, nombre, email, password, direccion);
