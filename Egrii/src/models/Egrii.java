@@ -45,5 +45,10 @@ public class Egrii implements Controlador{
     public Cliente obtenerUsuario(String email) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public boolean existeUsuario(String email) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
