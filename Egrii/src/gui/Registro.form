@@ -16,6 +16,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="Egrii - Registro"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -106,7 +107,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="aceptarBtnCliente" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cancelarBtnCliente" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
@@ -193,7 +194,7 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="aceptarBtnCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cancelarBtnCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
@@ -237,23 +238,17 @@
             <Component class="javax.swing.JTextField" name="textoNombreCliente">
             </Component>
             <Component class="javax.swing.JTextField" name="textoEmailCliente">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoEmailClienteActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="textoPasswordCliente">
             </Component>
             <Component class="javax.swing.JTextField" name="textoDirCliente">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoDirClienteActionPerformed"/>
-              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="cancelarBtnCliente">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelarBtnClienteActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="falloEmailRegistrado">
@@ -280,9 +275,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="textoTlfCliente">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoTlfClienteActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
@@ -429,16 +421,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="textoNombreEmpresa">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoNombreEmpresaActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="textoNIF">
             </Component>
             <Component class="javax.swing.JTextField" name="textoEmailEmpresa">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoEmailEmpresaActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel12">
               <Properties>
@@ -453,22 +439,10 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="textoTlfEmpresa">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoTlfEmpresaActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="textoPasswordEmpresa">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="textoDirEmpresa">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField2"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textoDirEmpresaActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="aceptarBtnEmpresa">
               <Properties>

@@ -53,7 +53,7 @@ public class Registro extends javax.swing.JDialog {
         textoEmailCliente = new javax.swing.JTextField();
         textoPasswordCliente = new javax.swing.JTextField();
         textoDirCliente = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        cancelarBtnCliente = new javax.swing.JButton();
         falloEmailRegistrado = new javax.swing.JLabel();
         faltanCamposCliente = new javax.swing.JLabel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
@@ -85,6 +85,7 @@ public class Registro extends javax.swing.JDialog {
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Egrii - Registro");
 
         aceptarBtnCliente.setText("Aceptar");
         aceptarBtnCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -103,22 +104,10 @@ public class Registro extends javax.swing.JDialog {
 
         jLabel5.setText("DIreccion");
 
-        textoEmailCliente.addActionListener(new java.awt.event.ActionListener() {
+        cancelarBtnCliente.setText("Cancelar");
+        cancelarBtnCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoEmailClienteActionPerformed(evt);
-            }
-        });
-
-        textoDirCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoDirClienteActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Cancelar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cancelarBtnClienteActionPerformed(evt);
             }
         });
 
@@ -129,12 +118,6 @@ public class Registro extends javax.swing.JDialog {
         faltanCamposCliente.setText("Falta algún campo");
 
         jLabel6.setText("Telefono");
-
-        textoTlfCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoTlfClienteActionPerformed(evt);
-            }
-        });
 
         jLabel7.setText("Iban");
 
@@ -170,7 +153,7 @@ public class Registro extends javax.swing.JDialog {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(aceptarBtnCliente)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1))
+                                .addComponent(cancelarBtnCliente))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel3)
@@ -234,7 +217,7 @@ public class Registro extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aceptarBtnCliente)
-                    .addComponent(jButton1))
+                    .addComponent(cancelarBtnCliente))
                 .addGap(50, 50, 50))
         );
 
@@ -248,36 +231,9 @@ public class Registro extends javax.swing.JDialog {
 
         jLabel11.setText("NUEVA EMPRESA");
 
-        textoNombreEmpresa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoNombreEmpresaActionPerformed(evt);
-            }
-        });
-
-        textoEmailEmpresa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoEmailEmpresaActionPerformed(evt);
-            }
-        });
-
         jLabel12.setText("IBAN");
 
         jLabel13.setText("telefono");
-
-        textoTlfEmpresa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoTlfEmpresaActionPerformed(evt);
-            }
-        });
-
-        textoPasswordEmpresa.setText("jTextField1");
-
-        textoDirEmpresa.setText("jTextField2");
-        textoDirEmpresa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoDirEmpresaActionPerformed(evt);
-            }
-        });
 
         aceptarBtnEmpresa.setText("Aceptar");
         aceptarBtnEmpresa.addActionListener(new java.awt.event.ActionListener() {
@@ -407,17 +363,9 @@ public class Registro extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cancelarBtnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarBtnClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void textoDirClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoDirClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoDirClienteActionPerformed
-
-    private void textoEmailClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoEmailClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoEmailClienteActionPerformed
+    }//GEN-LAST:event_cancelarBtnClienteActionPerformed
 
     private void aceptarBtnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarBtnClienteActionPerformed
         // TODO add your handling code here:
@@ -438,22 +386,6 @@ public class Registro extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_aceptarBtnClienteActionPerformed
 
-    private void textoNombreEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoNombreEmpresaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoNombreEmpresaActionPerformed
-
-    private void textoTlfClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoTlfClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoTlfClienteActionPerformed
-
-    private void textoEmailEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoEmailEmpresaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoEmailEmpresaActionPerformed
-
-    private void textoTlfEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoTlfEmpresaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoTlfEmpresaActionPerformed
-
     private void aceptarBtnEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarBtnEmpresaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_aceptarBtnEmpresaActionPerformed
@@ -462,20 +394,16 @@ public class Registro extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_cancelarBtnEmpresaActionPerformed
 
-    private void textoDirEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoDirEmpresaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textoDirEmpresaActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aceptarBtnCliente;
     private javax.swing.JButton aceptarBtnEmpresa;
+    private javax.swing.JButton cancelarBtnCliente;
     private javax.swing.JButton cancelarBtnEmpresa;
     private javax.swing.JLabel falloEmailRegistrado;
     private javax.swing.JLabel falloEmpresaRegistrada;
     private javax.swing.JLabel faltanCamposCliente;
     private javax.swing.JLabel faltanCamposEmpresa;
-    private javax.swing.JButton jButton1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
