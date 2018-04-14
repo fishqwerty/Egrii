@@ -18,6 +18,16 @@ public class Empresa extends Usuario{
         this.iban = iban;
     }
 
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public String getIban() {
+        return iban;
+    }
+    
+    
+
     
     
     
