@@ -29,7 +29,7 @@ public class Egrii implements Controlador{
 
     @Override
     public void nuevoRegistro() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        gui.nuevoUsuario();
     }
 
     @Override

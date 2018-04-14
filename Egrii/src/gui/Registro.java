@@ -22,12 +22,12 @@ public class Registro extends javax.swing.JDialog {
     public Registro(java.awt.Frame parent, boolean modal, Controlador controller) {
         super(parent, modal);
         this.controller=controller;
+        initComponents();
+        
         faltanCamposCliente.setVisible(false);
         faltanCamposEmpresa.setVisible(false);
         falloEmpresaRegistrada.setVisible(false);
         falloEmailRegistrado.setVisible(false);
-
-        initComponents();
     }
 
     /**

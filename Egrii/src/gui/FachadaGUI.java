@@ -27,4 +27,11 @@ public class FachadaGUI {
             }
         });
     }
+    
+    public void nuevoUsuario(){
+        Registro reg;
+        
+        reg=new Registro(vPrincipal, true, controlador);
+        reg.setVisible(true);
+    }
 }
