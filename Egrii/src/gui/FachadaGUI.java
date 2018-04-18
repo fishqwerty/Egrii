@@ -34,4 +34,11 @@ public class FachadaGUI {
         reg=new Registro(vPrincipal, true, controlador);
         reg.setVisible(true);
     }
+    
+    public void imprimirMensaje(String mensaje){
+        VAviso va;
+       
+       va = new VAviso(vPrincipal, true, mensaje);
+       va.setVisible(true);
+    }
 }

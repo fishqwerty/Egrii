@@ -5,10 +5,12 @@
  */
 package dataBase;
 
+import gui.FachadaGUI;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import models.users.Usuario;
 
 /**
  *
@@ -17,10 +19,11 @@ import java.util.Properties;
 public class FachadaBD {
 
     private java.sql.Connection conexion;
+    private FachadaGUI fgui;
     private DAOUsuarios daoUsuarios;
     private DAOAdministracion daoAdministracion;
 
-    public FachadaBD() {
+    public FachadaBD(FachadaGUI fgui) {
         Properties configuracion = new Properties();
 
         FileInputStream arqConfiguracion;
@@ -42,8 +45,10 @@ public class FachadaBD {
                     configuracion.getProperty("baseDatos"),
                     usuario);
 
-            daoUsuarios = new DAOUsuarios(conexion);
-            daoAdministracion = new DAOAdministracion(conexion);
+            daoUsuarios = new DAOUsuarios(conexion, fgui);
+            daoAdministracion = new DAOAdministracion(conexion, fgui);
+            this.fgui =fgui;
+            
           
         } catch (FileNotFoundException f){
             System.out.println(f.getMessage());
@@ -57,4 +62,10 @@ public class FachadaBD {
             //fa.muestraExcepcion(e.getMessage());
         }
     }
+    
+    public Usuario comprobarAutentificacion(Usuario user) {
+        return daoUsuarios.comprobarAutentificacion(user);
+    }
+    
+    
 }

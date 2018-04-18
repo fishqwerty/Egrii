@@ -23,7 +23,7 @@ public class Egrii implements Controlador{
     
     public Egrii(){
         gui = new FachadaGUI(this);
-        fbd = new FachadaBD();
+        fbd = new FachadaBD(gui);
     }
     public static void main(String[] args) {
         // TODO code application logic here
@@ -56,8 +56,9 @@ public class Egrii implements Controlador{
     }
 
     @Override
-    public Usuario comprobarAutentificacion(String text, String text0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Usuario comprobarAutentificacion(String email, String password) {
+        Usuario  user = new Usuario(null, null, email, password, null);
+        return fbd.comprobarAutentificacion(user);
     }
 
 

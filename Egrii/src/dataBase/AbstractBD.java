@@ -5,6 +5,7 @@
  */
 package dataBase;
 
+import gui.FachadaGUI;
 import java.sql.Connection;
 
 /**
@@ -15,9 +16,11 @@ abstract class AbstractBD {
     
     //private aplicacion.FachadaAplicacion fa;
     private java.sql.Connection conexion;
+    private FachadaGUI fgui;
 
-    public AbstractBD(Connection conexion) {
+    public AbstractBD(Connection conexion, FachadaGUI fgui) {
         this.conexion = conexion;
+        this.fgui = fgui;
     }
     
    
@@ -28,12 +31,10 @@ abstract class AbstractBD {
     protected void setConexion(java.sql.Connection conexion){
         this.conexion=conexion;
     }
- /*  
-   protected void setFachadaAplicacion(aplicacion.FachadaAplicacion fa){
-       this.fa=fa;
-   }
-   
-   protected aplicacion.FachadaAplicacion getFachadaAplicacion(){
-       return fa;
-   }*/
+
+    public FachadaGUI getFgui() {
+        return fgui;
+    }
+ 
+    
 }

@@ -5,6 +5,7 @@
  */
 package dataBase;
 
+import gui.FachadaGUI;
 import java.sql.Connection;
 
 /**
@@ -13,8 +14,8 @@ import java.sql.Connection;
  */
 class DAOAdministracion extends AbstractBD{
     
-    public DAOAdministracion(Connection conexion) {
-        super(conexion);
+    public DAOAdministracion(Connection conexion, FachadaGUI fgui) {
+        super(conexion, fgui);
     }
     
 }
