@@ -3,6 +3,7 @@
  */
 package models;
 
+import dataBase.FachadaBD;
 import gui.FachadaGUI;
 import models.users.Cliente;
 import models.users.Usuario;
@@ -18,9 +19,11 @@ public class Egrii implements Controlador{
      */
     
     private FachadaGUI gui;
+    private FachadaBD fbd;
     
     public Egrii(){
         gui = new FachadaGUI(this);
+        fbd = new FachadaBD();
     }
     public static void main(String[] args) {
         // TODO code application logic here
@@ -34,7 +37,7 @@ public class Egrii implements Controlador{
 
     @Override
     public boolean comprobarAutentificacion(Usuario user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+ 
     }
 
     @Override
