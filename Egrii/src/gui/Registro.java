@@ -371,17 +371,18 @@ public class Registro extends javax.swing.JDialog {
         // TODO add your handling code here:
         falloEmailRegistrado.setVisible(false);
         faltanCamposCliente.setVisible(false);
-        Cliente user = new Cliente(textoTlfCliente.getText(), textoIbanCliente.getText(), null, 
-                textoNombreCliente.getText(), textoEmailCliente.getText(), textoPasswordCliente.getText(), 
-                textoDirCliente.getText()); 
-        
+
         if (textoNombreCliente.getText().isEmpty() || textoIbanCliente.getText().isEmpty() || textoTlfCliente.getText().isEmpty()
                 || textoEmailCliente.getText().isEmpty() || textoPasswordCliente.getText().isEmpty() || textoDirCliente.getText().isEmpty()) {
             faltanCamposCliente.setVisible(true);
-        } else if (controller.existeUsuario(user)) {
+        } else if (controller.existeUsuario(textoTlfCliente.getText(), textoIbanCliente.getText(), 
+                textoNombreCliente.getText(), textoEmailCliente.getText(), textoPasswordCliente.getText(), 
+                textoDirCliente.getText())) {
             falloEmailRegistrado.setVisible(true);
         } else {
-            controller.registrarUsuario(user);
+            controller.registrarUsuario(textoTlfCliente.getText(), textoIbanCliente.getText(), 
+                textoNombreCliente.getText(), textoEmailCliente.getText(), textoPasswordCliente.getText(), 
+                textoDirCliente.getText());
 
         }
     }//GEN-LAST:event_aceptarBtnClienteActionPerformed

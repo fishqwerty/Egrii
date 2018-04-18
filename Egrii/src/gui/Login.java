@@ -188,10 +188,8 @@ public class Login extends javax.swing.JFrame {
 
     private void entrarLbMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarLbMouseClicked
         falloInicioSesion.setVisible(false);
-        Usuario user = new Usuario(null, null, textoEmail.getText(), textoPassword.getText(), null);
-        if(controller.comprobarAutentificacion(user)){
-            user = controller.obtenerUsuario(textoEmail.getText());
-            
+        Usuario user = controller.comprobarAutentificacion(textoEmail.getText(), textoPassword.getText());
+        if(user!=null){
             controller.loggeado(user);
             this.dispose();
         }

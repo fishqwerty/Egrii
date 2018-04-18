@@ -36,11 +36,6 @@ public class Egrii implements Controlador{
     }
 
     @Override
-    public boolean comprobarAutentificacion(Usuario user) {
- 
-    }
-
-    @Override
     public boolean loggeado(Usuario user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -51,12 +46,17 @@ public class Egrii implements Controlador{
     }
 
     @Override
-    public boolean existeUsuario(Usuario user) {
+    public boolean existeUsuario(String text, String text0, String text1, String text2, String text3, String text4) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void registrarUsuario(Cliente user) {
+    public void registrarUsuario(String text, String text0, String text1, String text2, String text3, String text4) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Usuario comprobarAutentificacion(String text, String text0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

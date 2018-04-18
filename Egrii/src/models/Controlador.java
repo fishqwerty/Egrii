@@ -18,9 +18,12 @@ public interface Controlador {
     
     
     public void nuevoRegistro();
-    public boolean comprobarAutentificacion(Usuario user);
     public boolean loggeado(Usuario user);
     public Usuario obtenerUsuario(String email);
-    public boolean existeUsuario(Usuario user);
-    public void registrarUsuario(Cliente user);
+
+    public boolean existeUsuario(String text, String text0, String text1, String text2, String text3, String text4);
+
+    public void registrarUsuario(String text, String text0, String text1, String text2, String text3, String text4);
+
+    public Usuario comprobarAutentificacion(String text, String text0);
 }
